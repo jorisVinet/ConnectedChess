@@ -43,10 +43,21 @@ Nous avons ensuite collé les capteurs magnétiques de l'autre côté de l'échi
 Nous avons aussi nous-même imprimé en 3D les 32 pièces d'échiquiers et inséré les aimants dans les pièces. Pour finir nous avons collés différents autocollants afin d'habiller les contours de l'échiquier et des points de couleur pour mettreen évidence la zone ou est situé le capteur sous chaque case.
 
 ### Application python
+Contenu dans la branch AppPython
 
+Ce code assure la lecture en continu des capteurs intégrés dans l'échiquier.
+Il détecte les mouvements des pièces grâce à la variation enregistrée par deux capteurs magnétiques. Lorsqu’un mouvement est détecté, les informations sont envoyées à une base de données en ligne Firebase, par exemple pour signaler le déplacement d’un pion.
+Le code doit être exécuté en continu afin de capturer et traiter les données provenant de la carte Arduino en temps réel.
 
 
 ### Application React js
+Contenu dans la branch AppReactJs. 
+
+Ce code, exécutable via Node.js, permet de traduire les informations stockées dans la base de données Firebase pour les exploiter dans un affichage web.
+Chaque nouvelle entrée ajoutée dans la base de données est récupérée et affichée en temps réel sur l'application web.
+Ainsi, il est possible d'établir une synchronisation instantanée entre les actions d'un joueur sur l'échiquier et leur représentation visuelle sur une page web.
+En outre, ce code intègre des vérifications basiques pour détecter les mouvements interdits ou impossibles, et affiche un message d'erreur lorsque nécessaire (par exemple : tenter de déplacer un pion sur trois cases).
+![image](https://github.com/user-attachments/assets/fecaa794-4c25-49b2-9679-d02598f81375)
 
 
 
